@@ -29,7 +29,7 @@
 
 <form id="aw_sendinvitation"  action="<?php echo $this->getUrl('points/invitation/sendinvitation') ?>" method="post">
     <fieldset>
-        <?php if ($maxPerSend = (int) $this->getMaxInvitationsPerSend()): ?>
+        <?php if ($maxPerSend = 3): ?>
             <div class="aw_legend">
                 <?php echo $this->__('Invite your friends by entering their email addresses below'); ?>
             </div>
@@ -44,7 +44,7 @@
                 <?php for ($_index = 2; $_index <= $maxPerSend; $_index++): ?>
                     <li>
                         <label for="email_<?php echo $_index ?>">
-                            <?php echo $_index; ?>:
+                            <?php echo $_index; ?> :
                         </label>
                         <input tabindex="<?php echo $_index ?>" name="email[]" id="email_<?php echo $_index ?>" title="<?php echo $this->__('Email') ?>" value="" class="input-text validate-email aw_points_input" type="text" />
                     </li>
@@ -64,7 +64,7 @@
                     </span>
                 </span>
             </button>
-            <p class="back-link"><a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>"><small>&laquo; </small><?php echo $this->__('Back to Invitations') ?></a></p>
+            <p class="back-link display_none"><a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>"><small>&laquo; </small><?php echo $this->__('Back to Invitations') ?></a></p>
         </div>
     </fieldset>
 </form>

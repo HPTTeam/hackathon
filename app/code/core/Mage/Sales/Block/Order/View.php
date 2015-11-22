@@ -42,7 +42,7 @@ class Mage_Sales_Block_Order_View extends Mage_Core_Block_Template
     protected function _prepareLayout()
     {
         if ($headBlock = $this->getLayout()->getBlock('head')) {
-            $headBlock->setTitle($this->__('Order # %s', $this->getOrder()->getRealOrderId()));
+            $headBlock->setTitle($this->__('Application # %s', $this->getOrder()->getRealOrderId()));
         }
         $this->setChild(
             'payment_info',
@@ -86,9 +86,9 @@ class Mage_Sales_Block_Order_View extends Mage_Core_Block_Template
     public function getBackTitle()
     {
         if (Mage::getSingleton('customer/session')->isLoggedIn()) {
-            return Mage::helper('sales')->__('Back to My Orders');
+            return Mage::helper('sales')->__('Back');
         }
-        return Mage::helper('sales')->__('View Another Order');
+        return Mage::helper('sales')->__('View Another');
     }
 
     public function getInvoiceUrl($order)

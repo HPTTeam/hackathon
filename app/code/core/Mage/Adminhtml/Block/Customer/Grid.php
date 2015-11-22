@@ -92,13 +92,13 @@ class Mage_Adminhtml_Block_Customer_Grid extends Mage_Adminhtml_Block_Widget_Gri
             ->load()
             ->toOptionHash();
 
-        $this->addColumn('group', array(
-            'header'    =>  Mage::helper('customer')->__('Group'),
-            'width'     =>  '100',
-            'index'     =>  'group_id',
-            'type'      =>  'options',
-            'options'   =>  $groups,
-        ));
+//        $this->addColumn('group', array(
+//            'header'    =>  Mage::helper('customer')->__('Group'),
+//            'width'     =>  '100',
+//            'index'     =>  'group_id',
+//            'type'      =>  'options',
+//            'options'   =>  $groups,
+//        ));
 
         $this->addColumn('Telephone', array(
             'header'    => Mage::helper('customer')->__('Telephone'),
@@ -106,43 +106,43 @@ class Mage_Adminhtml_Block_Customer_Grid extends Mage_Adminhtml_Block_Widget_Gri
             'index'     => 'billing_telephone'
         ));
 
-        $this->addColumn('billing_postcode', array(
-            'header'    => Mage::helper('customer')->__('ZIP'),
-            'width'     => '90',
-            'index'     => 'billing_postcode',
-        ));
+//        $this->addColumn('billing_postcode', array(
+//            'header'    => Mage::helper('customer')->__('ZIP'),
+//            'width'     => '90',
+//            'index'     => 'billing_postcode',
+//        ));
+//
+//        $this->addColumn('billing_country_id', array(
+//            'header'    => Mage::helper('customer')->__('Country'),
+//            'width'     => '100',
+//            'type'      => 'country',
+//            'index'     => 'billing_country_id',
+//        ));
 
-        $this->addColumn('billing_country_id', array(
-            'header'    => Mage::helper('customer')->__('Country'),
-            'width'     => '100',
-            'type'      => 'country',
-            'index'     => 'billing_country_id',
-        ));
-
-        $this->addColumn('billing_region', array(
-            'header'    => Mage::helper('customer')->__('State/Province'),
-            'width'     => '100',
-            'index'     => 'billing_region',
-        ));
+//        $this->addColumn('billing_region', array(
+//            'header'    => Mage::helper('customer')->__('State/Province'),
+//            'width'     => '100',
+//            'index'     => 'billing_region',
+//        ));
 
         $this->addColumn('customer_since', array(
-            'header'    => Mage::helper('customer')->__('Customer Since'),
+            'header'    => Mage::helper('customer')->__('Since'),
             'type'      => 'datetime',
             'align'     => 'center',
             'index'     => 'created_at',
             'gmtoffset' => true
         ));
 
-        if (!Mage::app()->isSingleStoreMode()) {
-            $this->addColumn('website_id', array(
-                'header'    => Mage::helper('customer')->__('Website'),
-                'align'     => 'center',
-                'width'     => '80px',
-                'type'      => 'options',
-                'options'   => Mage::getSingleton('adminhtml/system_store')->getWebsiteOptionHash(true),
-                'index'     => 'website_id',
-            ));
-        }
+//        if (!Mage::app()->isSingleStoreMode()) {
+//            $this->addColumn('website_id', array(
+//                'header'    => Mage::helper('customer')->__('Website'),
+//                'align'     => 'center',
+//                'width'     => '80px',
+//                'type'      => 'options',
+//                'options'   => Mage::getSingleton('adminhtml/system_store')->getWebsiteOptionHash(true),
+//                'index'     => 'website_id',
+//            ));
+//        }
 
         $this->addColumn('action',
             array(

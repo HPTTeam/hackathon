@@ -49,8 +49,8 @@ class Mage_Adminhtml_Block_Customer_Edit extends Mage_Adminhtml_Block_Widget_For
 
         parent::__construct();
 
-        $this->_updateButton('save', 'label', Mage::helper('customer')->__('Save Customer'));
-        $this->_updateButton('delete', 'label', Mage::helper('customer')->__('Delete Customer'));
+        $this->_updateButton('save', 'label', Mage::helper('customer')->__('Save Members'));
+        $this->_updateButton('delete', 'label', Mage::helper('customer')->__('Delete Members'));
 
         if (Mage::registry('current_customer')->isReadonly()) {
             $this->_removeButton('save');
@@ -78,7 +78,7 @@ class Mage_Adminhtml_Block_Customer_Edit extends Mage_Adminhtml_Block_Widget_For
             return $this->escapeHtml(Mage::registry('current_customer')->getName());
         }
         else {
-            return Mage::helper('customer')->__('New Customer');
+            return Mage::helper('customer')->__('New Members');
         }
     }
 

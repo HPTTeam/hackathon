@@ -2680,13 +2680,13 @@ a.follow_us_text:hover .icon_floow_us {
 #nav ul div { top: 0; }
 #nav ul ul,
 #nav ul div {  }
-
+.product-view .product-tabs { display: none;}
 #nav ul li a { background: url("../images/arrow-menu2.png") no-repeat scroll 18px 12px transparent !important; padding: 0 0 0 20px; text-transform:capitalize !important; color:#fff !important; font-size: 13px; }
 #nav ul li a span{ padding: 7px 12px; }
 #nav ul li a:hover { background: url("../images/arrow-menu2.png") no-repeat scroll 18px -42px transparent !important; color: #D5002A !important; }
 #nav ul span,
 #nav ul li.last li span { }
-
+.display_none { display: none !important; }
 /* Show menu */
 #nav li ul.shown-sub,
 #nav li div.shown-sub { left:0; z-index:999; }
@@ -3437,4 +3437,11 @@ div.popup {
 .catalogsearch-advanced-index .form-list select
 {
     width: 250px;
+}
+.manufacturer-index-view .block-title{display: none}
+.product-view .product-shop .add-to-box .add-to-links li:nth-child(2){display: none !important;}
+.catalog-category-view .block-title{display: none;}
+.catalog-category-view .sort-by,
+.catalog-category-view .limiter{
+    display: none !important;
 }

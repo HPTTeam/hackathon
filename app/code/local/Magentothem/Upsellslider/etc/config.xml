@@ -94,7 +94,7 @@
         <upsellslider>
             <upsellslider_config>
 				<enabled>1</enabled>
-				<title>UpSell Products</title>
+				<title>Related Jobs</title>
 				<auto>0</auto>
 				<speed>3000</speed>
 				<interval>600</interval>

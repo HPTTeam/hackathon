@@ -174,20 +174,40 @@ class Mage_Adminhtml_Sales_Order_InvoiceController extends Mage_Adminhtml_Contro
      */
     public function newAction()
     {
-        $invoice = $this->_initInvoice();
-        if ($invoice) {
-            $this->_title($this->__('New Invoice'));
+        $_order = Mage::getModel('sales/order')->load($this->getRequest()->getParam('order_id'));
+        if($_order->canInvoice()) {
+            /**
+             * Create invoice
+             * The invoice will be in 'Pending' state
+             */
+            $invoiceId = Mage::getModel('sales/order_invoice_api')
+                ->create($_order->getIncrementId(), array());
 
-            if ($comment = Mage::getSingleton('adminhtml/session')->getCommentText(true)) {
-                $invoice->setCommentText($comment);
-            }
+            $invoice = Mage::getModel('sales/order_invoice')
+                ->loadByIncrementId($invoiceId);
 
-            $this->loadLayout()
-                ->_setActiveMenu('sales/order')
-                ->renderLayout();
-        } else {
-            $this->_redirect('*/sales_order/view', array('order_id'=>$this->getRequest()->getParam('order_id')));
+            /**
+             * Pay invoice
+             * i.e. the invoice state is now changed to 'Paid'
+             */
+            //$invoice->capture()->save();
         }
+        $this->_redirect('*/sales_order/view', array('order_id'=>$this->getRequest()->getParam('order_id')));
+
+//        $invoice = $this->_initInvoice();
+//        if ($invoice) {
+//            $this->_title($this->__('New Invoice'));
+//
+//            if ($comment = Mage::getSingleton('adminhtml/session')->getCommentText(true)) {
+//                $invoice->setCommentText($comment);
+//            }
+//
+//            $this->loadLayout()
+//                ->_setActiveMenu('sales/order')
+//                ->renderLayout();
+//        } else {
+//            $this->_redirect('*/sales_order/view', array('order_id'=>$this->getRequest()->getParam('order_id')));
+//        }
     }
 
     /**

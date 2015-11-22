@@ -1010,7 +1010,7 @@ IWD.OPC.Billing = {
 				
 				IWD.OPC.Billing.bill_need_update = true;
 				IWD.OPC.Billing.validateForm();
-			});			
+			});
 		},
 		
 		validateForm: function(delay){

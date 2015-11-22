@@ -20,12 +20,12 @@
     <!-- Customer page -->
     <customer_account>
         <reference name="customer_account_navigation">
-            <action method="addLink" translate="label" module="points"
-                    ifconfig="points/referal_system_configuration/enablerefsyst">
-                <name>invitation</name>
-                <path>points/invitation</path>
-                <label>My Invitation</label>
-            </action>
+            <!--<action method="addLink" translate="label" module="points"-->
+                    <!--ifconfig="points/referal_system_configuration/enablerefsyst">-->
+                <!--<name>invitation</name>-->
+                <!--<path>points/invitation</path>-->
+                <!--<label>My Invitation</label>-->
+            <!--</action>-->
             <action method="addLink" translate="label" module="points">
                 <name>reward</name>
                 <path>points/reward</path>

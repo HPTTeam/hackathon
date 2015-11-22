@@ -28,7 +28,7 @@
 <config>
     <menu>
         <catalog translate="title" module="catalog">
-            <title>Catalog</title>
+            <title>Jobs</title>
             <sort_order>30</sort_order>
             <!--action>adminhtml/catalog</action-->
             <depends>
@@ -36,7 +36,7 @@
             </depends>
             <children>
                 <products translate="title" module="catalog">
-                    <title>Manage Products</title>
+                    <title>Manage Jobs</title>
                     <action>adminhtml/catalog_product/</action>
                     <sort_order>0</sort_order>
                 </products>
@@ -83,7 +83,7 @@
                         </children>
                     </system>
                     <catalog translate="title" module="catalog">
-                        <title>Catalog</title>
+                        <title>Jobs</title>
                         <sort_order>30</sort_order>
                         <children>
                             <attributes translate="title">
@@ -101,7 +101,7 @@
                                 <title>Manage Categories</title>
                             </categories>
                             <products translate="title">
-                                <title>Manage Products</title>
+                                <title>Manage Jobs</title>
                             </products>
                             <update_attributes translate="title">
                                 <title>Update Attributes</title>

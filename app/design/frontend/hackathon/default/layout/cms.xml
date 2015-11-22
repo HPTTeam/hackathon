@@ -58,16 +58,10 @@ Default layout, loads most of the pages
     </cms_page>
 
     <cms_index_index translate="label">
-        <label>CMS Home Page</label>
-        <!--<reference name="banner_static">-->
-            <!--<block type="page/html" name="banner.static" template="magentothem/banner_static.phtml"/>-->
-        <!--</reference>-->
-        <!--<reference name="banner_static_center">
-            <block type="page/html" name="banner.static.center" template="magentothem/banner_static_center.phtml"/>
-        </reference>-->
-        <!--<reference name="banner_corau">
-            <block type="page/html" name="banner.corau" template="magentothem/banner_corau.phtml"/>
-        </reference>-->
+        <label>Hackathon</label>
+        <reference name="banner_static">
+            <block type="page/html" name="banner.static" template="magentothem/banner_static.phtml"/>
+        </reference>
     </cms_index_index>
 
     <cms_index_defaultindex>

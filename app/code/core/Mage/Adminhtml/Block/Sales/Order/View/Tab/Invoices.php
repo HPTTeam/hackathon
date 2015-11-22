@@ -149,7 +149,7 @@ class Mage_Adminhtml_Block_Sales_Order_View_Tab_Invoices
 
     public function canShowTab()
     {
-        return true;
+        return false;
     }
 
     public function isHidden()

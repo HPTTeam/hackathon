@@ -85,7 +85,7 @@
                 <div class="add-to-box">
                     <?php echo $this->getChildHtml('addto') ?>
                     <?php if ($this->canEmailToFriend()): ?>
-                        <p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
+                        <p class="email-friend"><a href="#email_to_friend"><?php echo $this->__('Email to friends') ?></a></p>
                     <?php endif; ?>
                 </div>
                 <div class="product-social">
@@ -191,6 +191,9 @@
         </div>
     
 </div>
+<?php if(!Mage::getModel('customer/session')->isLoggedIn()){?>
+    <button type="button" title="<?php echo $this->__('You will be redirect to Login/Register page') ?>" class="button btn-cart" onclick="location.href='<?php echo Mage::getUrl('customer/account/login');?>';" ><span><span><?php echo $this->__('Login to Refer this job to your friends') ?></span></span></button>
+<?php }else{ ?>
 <div class="hpt_invitation_form">
     <?php
     $_SESSION['current_product_id'] = Mage::registry('current_product')->getId();
@@ -198,4 +201,5 @@
     ?>
     <?php echo $this->getLayout()->createBlock('points/customer_invitation_form')->setTemplate('aw_points/customer/mag14/invitation/form.phtml')->toHtml(); ?>
 
-</div>
+</div>]
+<?php } ?>

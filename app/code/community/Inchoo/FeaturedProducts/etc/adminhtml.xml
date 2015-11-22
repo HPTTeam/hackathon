@@ -11,7 +11,7 @@
         <catalog>
             <children>
                 <featuredproduct translate="title">
-                    <title>Featured Products</title>
+                    <title>Featured Jobs</title>
                     <sort_order>1</sort_order>
                     <action>adminhtml/featured/index</action>
                 </featuredproduct>
@@ -29,7 +29,7 @@
                             <config>
                                 <children>
                                     <featuredproducts translate="title" module="featuredproducts">
-                                        <title>Featured Products Settings</title>
+                                        <title>Featured Jobs Settings</title>
                                         <sort_order>50</sort_order>
                                     </featuredproducts>
                                 </children>
@@ -43,7 +43,7 @@
                     <catalog>
                         <children>
                             <featuredproduct translate="title" module="featuredproducts">
-                                <title>Featured Products Data</title>
+                                <title>Featured Jobs Data</title>
                                 <sort_order>60</sort_order>
                             </featuredproduct>
                         </children>

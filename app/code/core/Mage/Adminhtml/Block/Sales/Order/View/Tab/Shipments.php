@@ -136,7 +136,7 @@ class Mage_Adminhtml_Block_Sales_Order_View_Tab_Shipments
         if ($this->getOrder()->getIsVirtual()) {
             return false;
         }
-        return true;
+        return false;
     }
 
     public function isHidden()

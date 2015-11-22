@@ -47,16 +47,16 @@ Customer account pages, rendered for all tabs in dashboard
         </reference>
     </checkout_onepage_reorder>
 
-    <customer_account>
-        <!-- Mage_Sales -->
-        <reference name="customer_account_navigation">
-            <action method="addLink" translate="label" module="sales"><name>orders</name><path>sales/order/history/</path><label>My Orders</label></action>
-        </reference>
-        <reference name="left">
-            <block type="sales/reorder_sidebar" name="sale.reorder.sidebar" as="reorder" template="sales/reorder/sidebar.phtml"/>
-        </reference>
+    <!--<customer_account>-->
+        <!--&lt;!&ndash; Mage_Sales &ndash;&gt;-->
+        <!--<reference name="customer_account_navigation">-->
+            <!--<action method="addLink" translate="label" module="sales"><name>orders</name><path>sales/order/history/</path><label>My Orders</label></action>-->
+        <!--</reference>-->
+        <!--<reference name="left">-->
+            <!--<block type="sales/reorder_sidebar" name="sale.reorder.sidebar" as="reorder" template="sales/reorder/sidebar.phtml"/>-->
+        <!--</reference>-->
 
-    </customer_account>
+    <!--</customer_account>-->
 
 <!--
 Customer account home dashboard layout

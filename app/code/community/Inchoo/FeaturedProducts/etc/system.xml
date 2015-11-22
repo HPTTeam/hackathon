@@ -17,7 +17,7 @@
     <sections>
         <featuredproducts translate="label" module="featuredproducts">
             <class>separator-top</class>
-            <label>Featured Products</label>
+            <label>Featured Jobs</label>
             <tab>inchoo</tab>
             <sort_order>10</sort_order>
             <show_in_default>1</show_in_default>

@@ -11,7 +11,7 @@
             	foreach($files as $file){ 
             ?>
             <tr>
-                <td style="width:20%" class="label"><strong><?php echo Mage::helper('file')->__($file['type']) ?></strong></td>
+                <td style="width:20%" class="label"><strong><?php echo 'Attached CV :' ?></strong></td>
                 <td align="right" class="value"><a target="_blank" href='<?php $url =  $this->getBaseUrl().'media/uploads'.$file['filename']; echo str_replace('index.php/', '', $url); ?>'><?php echo $file['filename'];?></a></td>
             </tr>
             <?php } ?>

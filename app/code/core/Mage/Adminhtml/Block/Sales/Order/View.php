@@ -82,7 +82,7 @@ class Mage_Adminhtml_Block_Sales_Order_View extends Mage_Adminhtml_Block_Widget_
         }
 
         if ($this->_isAllowedAction('emails') && !$order->isCanceled()) {
-            $message = Mage::helper('sales')->__('Are you sure you want to send order email to customer?');
+            $message = Mage::helper('sales')->__('Are you sure you want to send email to jobseeker?');
             $this->addButton('send_notification', array(
                 'label'     => Mage::helper('sales')->__('Send Email'),
                 'onclick'   => "confirmSetLocation('{$message}', '{$this->getEmailUrl()}')",
@@ -147,9 +147,7 @@ class Mage_Adminhtml_Block_Sales_Order_View extends Mage_Adminhtml_Block_Widget_
         }
 
         if ($this->_isAllowedAction('invoice') && $order->canInvoice()) {
-            $_label = $order->getForcedDoShipmentWithInvoice() ?
-                Mage::helper('sales')->__('Invoice and Ship') :
-                Mage::helper('sales')->__('Invoice');
+            $_label = 'Verify';
             $this->_addButton('order_invoice', array(
                 'label'     => $_label,
                 'onclick'   => 'setLocation(\'' . $this->getInvoiceUrl() . '\')',
@@ -205,7 +203,7 @@ class Mage_Adminhtml_Block_Sales_Order_View extends Mage_Adminhtml_Block_Widget_
         } else {
             $_extOrderId = '';
         }
-        return Mage::helper('sales')->__('Order # %s %s | %s', $this->getOrder()->getRealOrderId(), $_extOrderId, $this->formatDate($this->getOrder()->getCreatedAtDate(), 'medium', true));
+        return Mage::helper('sales')->__('Application # %s %s | %s', $this->getOrder()->getRealOrderId(), $_extOrderId, $this->formatDate($this->getOrder()->getCreatedAtDate(), 'medium', true));
     }
 
     public function getUrl($params='', $params2=array())
