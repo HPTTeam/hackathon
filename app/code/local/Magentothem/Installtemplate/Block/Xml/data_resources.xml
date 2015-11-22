@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ma_corau>
+    <resources>
+        <resource>
+            <title>Ma_Corau Home page</title>
+            <identifier>ma_corau_home</identifier>
+            <root_template>one_column</root_template>
+				<content><![CDATA[
+				<div class="home-content">{{block type="tabsproduct/tabsproduct" name="tabsproduct" template="magentothem/tabsproduct/tabsproduct.phtml"}}</div>
+				]]></content>
+				<sort_order>1</sort_order>
+            <is_active>1</is_active>
+        </resource>
+    </resources>
+</ma_corau>

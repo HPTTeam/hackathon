@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<ma_corau>
+    <blocks>
+        <block>
+            <title>Banner Static</title>
+            <identifier>banner_static</identifier>
+            <content>
+                      <![CDATA[
+			<div class="banner-static">
+			<div class="container">
+			<div class="row-fluid">
+			<div class="span4">
+			<div class="banner col"><a href="{{store url="men.html"}}"><img src="{{media url="wysiwyg/banner-static.jpg"}}" alt="" /></a></div>
+			</div>
+			<div class="span4">
+			<div class="banner col1"><a href="{{store url="footwear.html"}}"><img src="{{media url="wysiwyg/banner-static1.jpg"}}" alt="" /></a></div>
+			</div>
+			<div class="span4">
+			<div class="banner col2"><a href="{{store url="women.html"}}"><img src="{{media url="wysiwyg/banner-static2.jpg"}}" alt="" /></a></div>
+			</div>
+			</div>
+			</div>
+			</div>
+                        ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+
+        <block>
+            <title>Footer Static</title>
+            <identifier>footer_static</identifier>
+            <content>
+                    <![CDATA[
+			<div class="f-col f-col1 span3">
+			<div class="footer-static-title">
+			<h3>About us</h3>
+			</div>
+			<div class="footer-static-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
+			</div>
+			<div class="f-col f-col2 span3">
+			<div class="footer-static-title">
+			<h3>Our service</h3>
+			</div>
+			<div class="footer-static-content row-fluid">
+			<ul>
+			<li class="first"><a href="#">Shipping &amp; Returns</a></li>
+			<li><a href="#">Secure Shopping</a></li>
+			<li><a href="#">International Shipping</a></li>
+			<li><a href="#">Affiliates</a></li>
+			<li class="last"><a href="{{store url="contacts"}}">Contact</a></li>
+			</ul>
+			</div>
+			</div>
+			<div class="f-col f-col3 span3">
+			<div class="footer-static-title">
+			<h3>My account</h3>
+			</div>
+			<div class="footer-static-content row-fluid">
+			<ul>
+			<li class="first"><a href="{{store url="customer/account/login/"}}">Sign In</a></li>
+			<li><a href="{{store url="checkout/cart/"}}">View Cart</a></li>
+			<li><a href="{{store url="wishlist"}}">My Wishlist</a></li>
+			<li><a href="{{store url="sales/order/history/"}}">Track My Order</a></li>
+			<li class="last"><a href="#">Help</a></li>
+			</ul>
+			</div>
+			</div>
+			<div class="f-col f-col4 span3">
+			<div class="about-us">
+			<div class="footer-static-title">
+			<h3>Shopping</h3>
+			</div>
+			<div class="footer-static-content row-fluid">{{block type="newsletter/subscribe" name="footer_subscribe" template="newsletter/subscribe.phtml"}}</div>
+			</div>
+			</div>
+		    ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+
+
+
+        <block>
+            <title>Static Sub Menu Col Right</title>
+            <identifier>pt_menu_idcat_4_right</identifier>
+            <content>
+                    <![CDATA[
+			<div class="sub-menu-col4"><a href="{{store url="men.html"}}"><img src="{{media url="wysiwyg/custom_menu1.jpg"}}" alt="" /></a></div>
+		    ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+
+
+
+
+        <block>
+            <title>Banner Static Center</title>
+            <identifier>banner_static_center</identifier>
+            <content>
+                   <![CDATA[
+			<div class="banner-static-center">
+			<div class="container">
+			<div class="box-static">
+			<div class="static-text">
+			<h3>T-SHIRT DESIGN</h3>
+			</div>
+			<div class="static-text1">
+			<h3>MAKE YOUR STYLE DIFFERENCE !</h3>
+			</div>
+			<div class="static-text2">
+			<h3>Neque porro quisquam est qui dolorem ipsum</h3>
+			</div>
+			<div class="static-link"><a href="#">VIEW NOW !</a></div>
+			</div>
+			</div>
+			</div>
+		    ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+
+
+        <block>
+            <title>Banner Left</title>
+            <identifier>banner_left</identifier>
+            <content>
+                <![CDATA[
+                   <div class="block block-banner-left"><a href="#"><img src="{{media url="wysiwyg/banner-left.jpg"}}" alt="" /></a></div>
+                    ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+
+
+
+
+        <block>
+            <title>Header Icon</title>
+            <identifier>header_icon</identifier>
+            <content>
+                 <![CDATA[
+		 <div class="header-icon">
+		<div class="google"><a href="#">google</a></div>
+		<div class="dribbe"><a href="#">dribbe</a></div>
+		<div class="facebook"><a href="#">facebook</a></div>
+		<div class="flow"><a href="#">flow</a></div>
+		<div class="twiter"><a href="#">twiter</a></div>
+		</div>
+		 ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+
+    </blocks>
+
+</ma_corau>
+

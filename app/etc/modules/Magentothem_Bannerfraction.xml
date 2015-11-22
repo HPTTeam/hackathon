@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Magentothem_Bannerfraction>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Magentothem_Bannerfraction>
+    </modules>
+</config> 

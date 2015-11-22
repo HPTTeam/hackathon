@@ -1,0 +1,130 @@
+<?php
+			if($this->getConfig('enabled') != 1) return false;
+			$banners = $this->getDataBannerFraction();
+			if(count($banners)<1) return ;
+?>
+<div class="slider-wrapper">
+			<div class="responisve-container">
+				<div class="slider">
+					<div class="fs_loader"></div>
+					<?php  
+						$path = Mage::getBaseUrl('media');				
+						foreach($banners as $banner) {
+						    //echo "<pre>"; print_r($banner);
+							$imageUrl = $path.$banner['image'];
+							$content = $banner['description'];	
+							$width = $banner['width'];
+							$height = $banner['height'];
+							$kindEffect = 1;
+							$kindEffect = $banner['kind_effect'];
+							$link = $banner['link'];
+							switch ($kindEffect) {
+								case 1:
+								?>
+									<div class="slide">
+										<img src="<?php echo $imageUrl; ?>" width ="<?php echo $width; ?>" height = "auto" data-position="-28,630" data-step="2" data-in="right"  data-delay="500" data-out="fade"/>													
+											<h2 width ="300" height = "auto"	class="teaser turky small"  	data-position="100,120" data-in="left" data-step="2" data-delay="2000">
+											<?php echo $banner['title']; ?>
+											</h2>	
+											<h3 	width ="700" height = "auto"	class="teaser turky small" 	data-position="175,120" data-in="left" data-step="2" data-delay="2100">
+											<?php echo $banner['title2']; ?>
+											</h3>
+											<?php if($link) { ?>
+											<p  width ="auto" height = "auto"		class="teaser turky small" 	data-position="300,120" data-in="left" data-step="2" data-delay="2200">
+											<a href = "<?php echo $banner['link']; ?>"><?php echo $this->__('shop now') ?></a>
+											</p>
+											<?php } ?>
+											<h4 width ="470" height = "50"		class="teaser turky small" 	data-position="230,120" data-in="left" data-step="2" data-delay="2300">
+											<?php echo nl2br($banner['description']); ?>
+											</h4>
+									</div>
+								<?php
+									break;
+								case 2:
+									?>
+									<div class="slide">
+										<img src="<?php echo $imageUrl; ?>" width ="<?php echo $width; ?>" height = "auto" data-position="0,70" data-in="top" data-step="2" data-delay="500" data-out="fade"/>													
+											<h2  width ="350" height = "auto"		class="teaser turky small"  	data-position="80,300" data-in="left" data-out="right" data-step="2" data-delay="2000">
+											<?php echo $banner['title']; ?>
+											</h2>	
+											<h3  width ="700" height = "auto"    class="teaser turky small" 	data-position="155,300" data-in="top" data-in="bottom" data-out="right" data-step="2" data-delay="2100">
+											<?php echo $banner['title2']; ?>
+											</h3>
+											<?php if($link) { ?>
+											<p 	class="teaser turky small" 	data-position="280,300" data-in="bottom" data-out="left"  data-step="2" data-delay="2200">
+											<a href = "<?php echo $banner['link']; ?>"> <?php echo $this->__('shop now') ?> </a>
+											</p>
+											<?php } ?>
+											<h4 width ="470" height = "50"		class="teaser turky small" 	data-position="210,300" data-in="right" data-out="right" data-step="2" data-delay="2300">
+											<?php echo nl2br($banner['description']); ?>
+											</h4>
+									</div>
+								<?php
+									break;
+								case 3:
+									?>
+									<div class="slide">
+										<img src="<?php echo $imageUrl; ?>" width ="<?php echo $width; ?>" height = "auto" data-position="0,590" data-in="bottom" data-step="2"  data-delay="0" data-out="fade"/>													
+											<h2 width ="300" height = "auto"	class="teaser turky small"  	data-position="100,100" data-in="top" data-out="left" data-step="2" data-delay="1000">
+											<?php echo $banner['title']; ?>
+											</h2>	
+											<h3 	width ="700" height = "auto"	class="teaser turky small" 	data-position="175,100" data-in="top" data-step="2" data-delay="1100">
+											<?php echo $banner['title2']; ?>
+											</h3>
+											<?php if($link) { ?>
+											<p  width ="auto" height = "auto"		class="teaser turky small" 	data-position="300,100" data-in="top" data-step="2" data-delay="1300">
+											<a href = "<?php echo $banner['link']; ?>"> <?php echo $this->__('shop now') ?> </a>
+											</p>
+											<?php } ?>
+											<h4 width ="470" height = "50"		class="teaser turky small" 	data-position="230,100" data-in="top" data-step="2" data-delay="1500">
+											<?php echo nl2br($banner['description']); ?>
+											</h4>
+									</div>
+								<?php
+									break;
+								case 4:
+																?>
+								<div class="slide">
+										<img src="<?php echo $imageUrl; ?>" width ="<?php echo $width; ?>" height = "auto" data-position="0,0" data-in="bottom" data-step="1"  data-delay="0" data-out="fade"/>													
+											<h2 		class="teaser turky small"  	data-position="240,600" data-in="bottom" data-step="2" data-delay="1000">
+											<?php echo $banner['title']; ?>
+											</h2>	
+											<h3 		class="teaser turky small" 	data-position="80,600" data-in="bottom" data-step="2" data-delay="2000">
+											<?php echo $banner['title2']; ?>
+											</h3>
+											<?php if($link) { ?>
+											<p 		class="teaser turky small" 	data-position="350,600" data-in="bottom" data-step="2" data-delay="2000">
+											<a href = "<?php echo $banner['link']; ?>"> <?php echo $this->__('shop now') ?> </a>
+											</p>
+											<?php } ?>
+											<h4 width ="470" height = "50"		class="teaser turky small" 	data-position="150,600" data-in="bottom" data-step="2" data-delay="2000">
+											<?php echo nl2br($banner['description']); ?>
+											</h4>
+									</div>
+								<?php
+									break;
+							}
+						?>
+					<?php } ?>
+				</div>
+			</div>
+</div>
+				<script type ="text/javascript">
+		
+			$jq(document).ready(function(){
+				$jq('.slider').fractionSlider({
+					'autoChange' : <?php echo ($this->getConfig('auto') ? 'true' : 'false' ) ?>, // auto change slides
+					'fullWidth': 			true,
+					'controls': 	<?php echo  ($this->getConfig('next_back') ? 'true' : 'false') ?>, 
+					'pager': 		<?php echo  ($this->getConfig('nav_ctrl') ? 'true' : 'false') ?>, 
+					'responsive': 			true,
+					'dimensions': 			"1000,400",
+					'increase': 			false,
+					'pauseOnHover': 		<?php echo  ($this->getConfig('hover') ? 'true' : 'false') ?>, 
+					'slideTransitionSpeed' : <?php echo  ($this->getConfig('speed') ? $this->getConfig('speed')  : 2000) ?>,
+					'delay' : <?php echo  ($this->getConfig('delay') ? $this->getConfig('delay')  : 2000) ?>
+				});
+
+			});
+		</script>
+		
